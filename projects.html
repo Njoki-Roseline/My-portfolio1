@@ -24,20 +24,25 @@
         .project-card {
             background: var(--container-color);
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: 0.3s;
+            overflow: visible;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(0) !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            position: relative;
+            z-index: 1;
         }
         
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(0) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
         
         .project-img {
             width: 100%;
             height: 200px;
             object-fit: cover;
+            border-radius: 10px 10px 0 0;
         }
         
         .project-content {
@@ -74,17 +79,21 @@
         
         .project-links {
             display: flex;
-            gap: 1rem;
+            flex-wrap: wrap;
+            gap: 0.75rem;
         }
         
         .project-link {
             display: inline-flex;
             align-items: center;
-            padding: 0.5rem 1rem;
+            justify-content: center;
+            padding: 0.6rem 1rem;
             border-radius: 5px;
             font-size: 0.9rem;
             font-weight: 500;
             transition: 0.3s;
+            width: 100%;
+            text-align: center;
         }
         
         .project-link i {
@@ -117,6 +126,47 @@
         @media (max-width: 768px) {
             .projects-container {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 1rem;
+            }
+            
+            .project-card {
+                margin: 0 auto;
+                max-width: 100%;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            }
+            
+            .project-content {
+                padding: 1.25rem;
+            }
+            
+            .project-links {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .project-link {
+                width: 100%;
+                padding: 0.7rem 1rem;
+            }
+            
+            .project-img {
+                height: 180px;
+            }
+            
+            .project-title {
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .project-description {
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+            
+            .tech-tag {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.6rem;
             }
         }
     </style>
@@ -237,7 +287,8 @@
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Portfolio Website" class="project-img">
                         <div class="project-content">
                             <h3 class="project-title">Portfolio Website</h3>
-                            <p class="project-description">A personal portfolio website to showcase my projects and skills. Built with HTML, CSS, and vanilla JavaScript for smooth animations.</p>
+                            <p class="project-description">A personal portfolio website to showcase my projects and skills.
+                                 Built with HTML, CSS, and vanilla JavaScript for smooth animations.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">HTML5</span>
                                 <span class="tech-tag">CSS3</span>
@@ -245,10 +296,10 @@
                                 <span class="tech-tag">Responsive</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="project-link demo">
+                                <a href="https://my-portfolio1-brown.vercel.app/" class="project-link demo">
                                     <i class="fas fa-external-link-alt"></i> Live Demo
                                 </a>
-                                <a href="#" class="project-link code">
+                                <a href="https://github.com/Njoki-Roseline/My-portfolio1" class="project-link code">
                                     <i class="fab fa-github"></i> Code
                                 </a>
                             </div>
