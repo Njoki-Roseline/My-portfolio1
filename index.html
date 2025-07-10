@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roselynn Njoki | Creative Developer</title>
+    <meta name="description" content="Transforming ideas into immersive digital experiences. Frontend Developer & UI/UX Enthusiast.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-text">
+            <span class="letter" style="--i:1">R</span>
+            <span class="letter" style="--i:2">O</span>
+            <span class="letter" style="--i:3">S</span>
+            <span class="letter" style="--i:4">E</span>
+            <span class="letter" style="--i:5">L</span>
+            <span class="letter" style="--i:6">Y</span>
+            <span class="letter" style="--i:7">N</span>
+            <span class="letter" style="--i:8">N</span>
+        </div>
+    </div>
+
+    <!-- Animated Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="intro-text">
+                        <h1 class="glitch" data-text="Roselynn Njoki">
+                            <span>Roselynn Njoki</span>
+                        </h1>
+                        <div class="typewriter">
+                            <h2 class="dynamic-text">
+                                <span class="text-wrapper">
+                                    <span class="line line1"></span>
+                                    <span class="line line2">Frontend Developer</span>
+                                </span>
+                            </h2>
+                        </div>
+                        <p class="hero-description">Crafting digital experiences that inspire and engage</p>
+                        
+                        <div class="cta-buttons">
+                            <a href="home.html" class="magnetic-btn" data-magnetic>
+                                <span class="btn-bg"></span>
+                                <span class="btn-text">Explore My Work</span>
+                                <span class="btn-icon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                            <a href="#about" class="text-link" data-magnetic>
+                                <span>Learn More About Me</span>
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="floating-shapes">
+                            <div class="shape shape-1"></div>
+                            <div class="shape shape-2"></div>
+                            <div class="shape shape-3"></div>
+                        </div>
+                        <div class="profile-img-container">
+                            <div class="profile-decorator decorator-1"></div>
+                            <div class="profile-decorator decorator-2"></div>
+                            <div class="hero-image">
+                                <img src="assets/rozeey.jpg" alt="Roselynn Njoki" class="profile-img">
+                                <div class="reflection"></div>
+                                <div class="glow"></div>
+                                <div class="reflection-container">
+                                    <div class="reflection"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrows">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-header" data-scroll data-scroll-speed="1">
+                    <h2 class="section-title">
+                        <span class="title-line">About Me</span>
+                        <span class="title-bg">About</span>
+                    </h2>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text" data-scroll data-scroll-speed="0.8">
+                        <h3>Turning Ideas Into Digital Reality</h3>
+                        <p>I'm probably not a typical 
+                            designer positioned behind an illustrator
+                             artboard adjusting pixels. But I design,
+                              immersed in stylesheets, tweaking font sizes,
+                              and contemplating layouts. This is where you'll find me.</p>
+                        
+                        <div class="skills-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>Vue.js</span>
+                            <span>UI/UX</span>
+                        </div>
+                        
+                        <a href="home.html" class="btn-primary">
+                            <span>View My Portfolio</span>
+                            <div class="arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="about-visual" data-scroll data-scroll-speed="0.8">
+                        <div class="visual-element">
+                            <div class="circle"></div>
+                            <div class="dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="card">
+                                <div class="card-content">
+                                    <h4>Let's Create Something Amazing</h4>
+                                    <p>Ready to bring your ideas to life?</p>
+                                    <a href="home.html#contact" class="btn-outline">Get In Touch</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home" class="logo">RN</a>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="home.html">Portfolio</a>
+                    <a href="home.html#about">About</a>
+                    <a href="home.html#projects">Work</a>
+                    <a href="home.html#contact">Contact</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2025</span> Roselynn Njoki. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Cursor -->
+    <div class="cursor">
+        <div class="cursor-inner">
+            <span class="cursor-text">View</span>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/landing.js"></script>
+</body>
+</html>
