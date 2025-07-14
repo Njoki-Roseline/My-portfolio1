@@ -372,11 +372,30 @@ img {
 
 .glitch {
     position: relative;
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-weight: 900;
     color: white;
     margin-bottom: 1.5rem;
     line-height: 1.1;
+}
+
+/* Responsive font sizes for hero heading */
+@media (min-width: 576px) {
+    .glitch {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .glitch {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .glitch {
+        font-size: 4.5rem;
+    }
 }
 
 .glitch::before,
