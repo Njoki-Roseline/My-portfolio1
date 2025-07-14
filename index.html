@@ -27,15 +27,21 @@
 <body>
     <!-- Preloader -->
     <div class="preloader">
-        <div class="preloader-text">
-            <span class="letter" style="--i:1">R</span>
-            <span class="letter" style="--i:2">O</span>
-            <span class="letter" style="--i:3">S</span>
-            <span class="letter" style="--i:4">E</span>
-            <span class="letter" style="--i:5">L</span>
-            <span class="letter" style="--i:6">I</span>
-            <span class="letter" style="--i:7">N</span>
-            <span class="letter" style="--i:8">E</span>
+        <div class="preloader-content">
+            <div class="name-animation">
+                <span class="name-part">R</span>
+                <span class="name-part">O</span>
+                <span class="name-part">S</span>
+                <span class="name-part">E</span>
+                <span class="name-part">L</span>
+                <span class="name-part">I</span>
+                <span class="name-part">N</span>
+                <span class="name-part">E</span>
+                <div class="name-overlay"></div>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
         </div>
     </div>
 
@@ -49,8 +55,8 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="intro-text">
-                        <h1 class="glitch" data-text="Roseline njoki">
-                            <span>Roseline Njoki</span>
+                        <h1 class="glitch" data-text="Dev Roseline">
+                            <span>Dev Roseline</span>
                         </h1>
                         <div class="typewriter">
                             <h2 class="dynamic-text">
@@ -69,11 +75,19 @@
                                 <span class="btn-icon">
                                     <i class="fas fa-arrow-right"></i>
                                 </span>
+                                <span class="btn-particles"></span>
                             </a>
                             <a href="#about" class="text-link" data-magnetic>
                                 <span>Learn More About Me</span>
                                 <i class="fas fa-arrow-down"></i>
                             </a>
+                        </div>
+                        
+                        <div class="social-links hero-social">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                     
@@ -124,27 +138,46 @@
                 <div class="about-content">
                     <div class="about-text" data-scroll data-scroll-speed="0.8">
                         <h3>Turning Ideas Into Digital Reality</h3>
-                        <p>I'm probably not a typical 
-                            designer positioned behind an illustrator
-                             artboard adjusting pixels. But I design,
-                              immersed in stylesheets, tweaking font sizes,
-                              and contemplating layouts. This is where you'll find me.</p>
+                        <p>I'm a passionate frontend developer who loves turning ideas into beautiful, functional websites. With a keen eye for design and a love for clean code, I create digital experiences that are both visually stunning and user-friendly.</p>
                         
-                        <div class="skills-tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>React</span>
-                            <span>Vue.js</span>
-                            <span>UI/UX</span>
-                        </div>
-                        
-                        <a href="home.html" class="btn-primary">
-                            <span>View My Portfolio</span>
-                            <div class="arrow">
-                                <i class="fas fa-arrow-right"></i>
+                        <div class="skills-progress">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML5 & CSS3</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 95%"></div>
+                                </div>
                             </div>
-                        </a>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>React</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>UI/UX Design</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="about-visual" data-scroll data-scroll-speed="0.8">
@@ -164,6 +197,14 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="portfolio-button-container">
+                        <a href="home.html" class="btn-primary">
+                            <span>View My Portfolio</span>
+                            <div class="arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -198,6 +239,29 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <script>
+        // Back to top button
+        const backToTop = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
     
     <!-- Cursor -->
     <div class="cursor">

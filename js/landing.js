@@ -5,31 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Preloader Animation
     const preloader = document.querySelector('.preloader');
-    const letters = document.querySelectorAll('.letter');
+    const nameParts = document.querySelectorAll('.name-part');
     
-    // Animate each letter in the preloader
-    gsap.to(letters, {
-        y: -30,
-        opacity: 0,
-        duration: 0.5,
-        stagger: 0.1,
-        ease: 'power2.out',
-        delay: 1,
-        onComplete: () => {
-            // Hide preloader after animation
-            gsap.to(preloader, {
-                opacity: 0,
-                duration: 0.8,
-                ease: 'power2.inOut',
-                onComplete: () => {
-                    preloader.style.display = 'none';
-                    document.body.style.overflow = 'visible';
-                    // Start other animations after preloader
-                    initAnimations();
-                }
-            });
-        }
+    // Set index for each name part for staggered animation
+    nameParts.forEach((part, index) => {
+        part.style.setProperty('--i', index);
     });
+    
+    // Hide preloader after animation completes
+    const loadingDuration = 2.5; // Match this with CSS animation duration
+    
+    setTimeout(() => {
+        gsap.to(preloader, {
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power2.inOut',
+            onComplete: () => {
+                preloader.style.display = 'none';
+                document.body.style.overflow = 'visible';
+                // Start other animations after preloader
+                initAnimations();
+            }
+        });
+    }, (loadingDuration * 1000) + 500); // Add 500ms delay after loading bar completes
     
     // Typewriter effect
     function initTypewriter() {
